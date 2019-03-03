@@ -1,7 +1,4 @@
 class Api::V1::TryUizaController < ApplicationController
-  def index
-  end
-
   def execute
     code = params[:code]
     @result = eval code
