@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: 123456
+  host: localhost
+
+development:
+  <<: *default
+  database: try_uiza_dev
+
+test:
+  <<: *default
+  database: try_uiza_test
+
+production:
+  <<: *default
+  database: try_uiza_prod
